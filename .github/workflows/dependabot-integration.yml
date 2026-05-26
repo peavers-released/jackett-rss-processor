@@ -4,7 +4,7 @@ on:
 
 jobs:
   dependabot:
-    runs-on: ubuntu-latest
+    runs-on: peavers-released-runners
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
