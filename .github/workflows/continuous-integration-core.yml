@@ -11,7 +11,7 @@ name: Continuous-integration-core
 jobs:
   check:
     name: Build and analyze
-    runs-on: peavers-released-runners
+    runs-on: ${{ vars.RUNNER_LABEL || 'blacksmith-4vcpu-ubuntu-2404' }}
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
