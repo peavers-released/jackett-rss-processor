@@ -4,7 +4,7 @@ on:
 
 jobs:
   dependabot:
-    runs-on: peavers-released-runners
+    runs-on: ${{ vars.RUNNER_LABEL || 'blacksmith-4vcpu-ubuntu-2404' }}
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
